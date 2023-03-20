@@ -12,4 +12,4 @@
 
 ### Pipeline demo
 
-    ![](https://github.com/judeleonard/Terraform_Projects/blob/dev/lambda_function/image/lambda_pipeline.png)
+![](https://github.com/judeleonard/Terraform_Projects/blob/dev/lambda_function/image/lambda_pipeline.png)
