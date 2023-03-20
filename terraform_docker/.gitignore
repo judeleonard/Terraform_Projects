@@ -1,0 +1,7 @@
+.terraform/*
+noderedvol/*
+terraform.tfstate.d
+terraform.lock.hcl
+graph-plan.pdf
+terraform.tfstate
+terraform.tfstate.backup

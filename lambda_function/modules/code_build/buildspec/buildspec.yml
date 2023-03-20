@@ -1,0 +1,30 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+        # Install the AWS CLI
+      - pip install awscli
+        # install zip 
+      - apt-get install zip
+
+  pre_build:
+    commands:
+      - echo Entered the pre_build stage
+        # zip lambda code directory 
+      - zip -r lambda_src.zip lambda_code 
+        #create key in our target bucket and upload lambda code to s3
+      - aws s3api put-object --bucket "$PROJECT_BUCKET" --key "$MY_PATH"/lambda_src.zip --body lambda_src.zip
+     
+  build:
+    commands:
+        # create lambda function and then update lamda function from s3
+      - aws lambda create-function --function-name jude_lambda_function --code S3Bucket="$PROJECT_BUCKET",S3Key="$MY_PATH"/lambda_src.zip --handler jude_lambda_function.hello  --runtime python3.9 --role "$LAMBDA_ROLE_ARN" --memory-size 1024  
+  
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - lambda_code/*
