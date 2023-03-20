@@ -19,7 +19,7 @@ phases:
   build:
     commands:
         # create lambda function and then update lamda function from s3
-      - aws lambda create-function --function-name jude_lambda_function --code S3Bucket="$PROJECT_BUCKET",S3Key="$MY_PATH"/lambda_src.zip --handler jude_lambda_function.hello  --runtime python3.9 --role "$LAMBDA_ROLE_ARN" --memory-size 1024  
+      - aws lambda create-function --function-name jude_lambda_function --code S3Bucket="$PROJECT_BUCKET",S3Key="$MY_PATH"/lambda_src.zip --handler custom_lambda_function.hello  --runtime python3.9 --role "$LAMBDA_ROLE_ARN" --memory-size 1024  
   
   post_build:
     commands:
