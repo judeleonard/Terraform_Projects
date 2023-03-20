@@ -12,4 +12,4 @@
 
 ### Pipeline demo
 
-    ![]()
+    ![](https://github.com/judeleonard/Terraform_Projects/blob/dev/lambda_function/image/Screenshot%20from%202023-02-23%2010-35-21.png)
