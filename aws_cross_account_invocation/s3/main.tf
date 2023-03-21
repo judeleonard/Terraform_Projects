@@ -4,7 +4,7 @@ provider "aws" {
     region = "${var.region}"
 }
 
-resource "aws_s3_bucket" "jude-capstone-bucket" {
+resource "aws_s3_bucket" "jude-project-bucket" {
     bucket = "${var.bucket_name}" 
     acl = "${var.acl_value}" 
     tags = {

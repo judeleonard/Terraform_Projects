@@ -1,4 +1,9 @@
-## This project deploys a custom lambda function to an aws destination account using aws codepipeline which can also be version controlled by Terraform.
+## This project deploys a custom lambda function to an aws destination account using aws codepipeline.
+
+## How it works
+
+codecommit is deployed to aws csc account and the codepipeline deploys the custom lambda function to another aws target account. The backend is bootstrapped using 
+S3 for storing terraform tfstate. 
 
 ### Commands to run:
 
