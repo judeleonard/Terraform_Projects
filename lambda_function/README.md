@@ -6,6 +6,8 @@ codecommit is deployed to aws csc account and the codepipeline deploys the custo
 S3 for storing terraform tfstate. 
 
 ### Commands to run:
+        
+        - terraform init
 
         - terraform fmt
 
@@ -14,6 +16,11 @@ S3 for storing terraform tfstate.
         - terraform plan --var-file=filename.tfvars
 
         - terraform apply --var-file=filename.tfvars --auto-approve
+
+
+### Build Phases
+
+![](https://github.com/judeleonard/Terraform_Projects/blob/dev/lambda_function/image/buildspec_stages.png)
 
 ### Pipeline demo
 
