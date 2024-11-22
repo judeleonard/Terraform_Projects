@@ -1,0 +1,6 @@
+.terraform.lock.hcl
+.terraform/*
+jude_codecommit_credentials.csv
+terraform.tfstate.backup
+terraform.tfvars
+variables.tf
